@@ -1,29 +1,42 @@
+Task 7.txt
+Today
+10:22 PM
+
+Antony Bahati uploaded an item
+Text
+Task 7.txt
+#include <stdio.h>
 #include "main.h"
 
 /**
- * rev_string - reverses a string
- * @s: input string
- * Return: string in reverse
+ * puts_half - prints a string
+ * @str: string to print
+ *
+ * Return: nothing
  */
+
 void puts_half(char *str)
-
 {
-        int len = 0;
+	int i, len = _strlen(str);
 
-        while (*str != '\0')
-	{	
-                len++;
-		str++;
-	}
+	for (i = ((len - 1) / 2) + 1; i < len; i++)
+		putchar(*(str + i));
+	putchar(10);
+}
 
-        str -= (len / 2);	
-        while  (*str != '\0')
-        {
-             
-              _putchar(*str);
-              str++; 
-         }
+/**
+* _strlen - returns the length of a string
+* @s: string
+*
+* Return: the length of the given string
+*/
 
-	_putchar('\n');
+int _strlen(char *s)
+{
+	int len = 0;
 
+	while (*(s + len) != '\0')
+		len++;
+
+	return (len);
 }
