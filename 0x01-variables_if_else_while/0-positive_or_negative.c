@@ -1,19 +1,28 @@
-#include "_putchar.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - function to print
- *
+ * main - entry point
+ * Description: prints  if a number is positive or negative.
  * Return: 0
  */
 int main(void)
 {
-	char _putchar[9] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n'};
-	unsigned int c;
+	int n;
 
-	for (c = 0; c < sizeof(_putchar); c++)
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
 	{
-		_putchar(_putchar[c]);
+		printf("%d is positive\n", n);
 	}
-_putchar('\n');
-return (0);
+	else if (n == 0)
+	{
+		printf("%d is zero\n", n);
+	}
+	else if (n < 0)
+	{
+		printf("%d is negative\n", n);
+	}
+	return (0);
 }
