@@ -1,28 +1,32 @@
-#include <stdio.h>
-
+#include "holberton.h"
 /**
- *main - prints hexadecimal base 0123456789abcdef, using putchar
- *Return: Always 0 (Success)
+ * jack_bauer - func that prints every minute of the day of Jack Bauer, starti
+ * n from 00:00 to 23:59, min loop counts mins, while hour loop counts hours
+ * and resets mins
+ * Return: 0
  */
-
-int main(void)
+void jack_bauer(void)
 {
-	int n = '0';
-	int a_to_f = 'a';
+	int hours = 0;
+	int minutes = 0;
+	int hours_remainder;
+	int mins_remainder;
 
-	while (n <= '9') /*print 0-9*/
+	while (hours <= 23)
 	{
-		putchar(n);
-		n++;
-	}
-
-	while (a_to_f <= 'f') /*print a-f to finish hexbase*/
+	while (minutes <= 59)
 	{
-		putchar(a_to_f);
-		a_to_f++;
+	mins_remainder = minutes % 10;
+	hours_remainder = hours % 10;
+	_putchar(hours / 10 + '0');
+	_putchar(hours_remainder + '0');
+	_putchar(':');
+	_putchar(minutes / 10 + '0');
+	_putchar(mins_remainder + '0');
+	minutes++;
+	_putchar('\n');
 	}
-
-	putchar('\n');
-
-	return (0);
+	hours++;
+	minutes = 0;
+}
 }
