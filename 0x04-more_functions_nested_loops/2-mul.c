@@ -1,17 +1,14 @@
-/*
- * File: 2-mul.c
- * Auth: Brennan D Baraban
- */
-
-#include "holberton.h"
+#include "main.h"
 
 /**
- * mul - Multiples two integers.
- * @a: The first integer to be multiplied.
- * @b: The second integer to be multiplied.
+ * mul - multiplies two integers
  *
- * Return: The result of the multiplication.
- */
+ * @a: first input
+ * @b: second input
+ *
+ * Return: return results
+*/
+
 int mul(int a, int b)
 {
 	return (a * b);
