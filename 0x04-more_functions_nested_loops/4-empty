@@ -1,0 +1,45 @@
+Task 1.txt
+Who has access
+A
+System properties
+Type
+Text
+Size
+242 bytes
+Storage used
+242 bytes
+Location
+More functions, more nested loops
+Owner
+Antony Bahati
+Modified
+Sep 15, 2022 by Antony Bahati
+Opened
+2:57 PM by me
+Created
+Sep 20, 2022
+No description
+Viewers can download
+#include <stdio.h>
+#include "main.h"
+
+/**
+*print_most_numbers - prints numbers except 2 and 4
+*
+*Return: returns nothing
+*/
+
+void print_most_numbers(void)
+{
+	int n;
+
+	for (n = 48; n < 58; n++)
+	{
+		if ((n == 50) || (n == 52))
+		{
+			continue;
+		}
+		putchar(n);
+	}
+	putchar(10);
+}
