@@ -1,8 +1,8 @@
-#include "main.h"
+#includei "main.h"
 
 /**
  * _puts_recursion - prints's a string followed by a new line
- * @s: string to printed
+ * @s: string to be printed
  *
  * Return: void
  */
