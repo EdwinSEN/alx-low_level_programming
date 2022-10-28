@@ -1,4 +1,3 @@
-oad
 #include "main.h"
 
 /**
